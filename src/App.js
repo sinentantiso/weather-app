@@ -12,13 +12,23 @@ export default function App() {
           <div className="location">
             <p>Durban</p>
             <div className="temp">
-              <h1>50F</h1>
+              <h1>50°F</h1>
             </div>
-            <div></div>
+            <div className="description">
+              <p>Clouds</p>
+            </div>
+          </div>
+          <div className="bottom">
+            <div className="feels">
+              <p>Cloudy</p>
+            </div>
+            <div className="humidity">
+              <p>20%</p>
+            </div>
+            <div className="wind"></div>
           </div>
         </div>
       </div>
-      <div className="bottom"></div>
     </div>
   );
 }
