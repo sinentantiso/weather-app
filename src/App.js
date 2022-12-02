@@ -1,10 +1,23 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "./style.css";
-import axios from "axios"
+import axios from "axios";
 
 export default function App() {
+  const [data, setData] = useState({});
+  const [location, setLocation] = useState("");
 
-  const url = "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=a317f1ed3617e08a94e2d851ebdb1b83"
+  const url =
+    "https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=a317f1ed3617e08a94e2d851ebdb1b83";
+
+  const searchLocation = () => {
+    if (event.key === "Enter") {
+      axios.get(url).then((response) => {
+        setData(response.data);
+        console.log(response.data);
+      });
+    }
+  };
+
   return (
     <div className="App">
       <div className="container">
@@ -20,12 +33,16 @@ export default function App() {
           </div>
           <div className="bottom">
             <div className="feels">
-              <p>Cloudy</p>
+              <p className="bold">65°C</p>
+              <p>Feels Like</p>
             </div>
             <div className="humidity">
-              <p>20%</p>
+              <p className="bold">20%</p>
+              <p>Humidity</p>
             </div>
             <div className="wind"></div>
+            <p className="bold">12 MPH</p>
+            <p>Wind speed</p>
           </div>
         </div>
       </div>
