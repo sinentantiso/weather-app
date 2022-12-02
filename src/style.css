@@ -19,7 +19,7 @@ h1 {
   color: #fff;
 }
 
-.app::before{
+.app::before {
   content: '';
   background: url('./assets/sunset.jpg') no-repeat center center/cover;
   position: absolute;
@@ -28,6 +28,18 @@ h1 {
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+.app .search {
+  text-align: center;
+  padding: 1rem;
+}
+
+.app input {
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .container {
