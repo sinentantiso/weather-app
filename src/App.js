@@ -7,7 +7,7 @@ export default function App() {
   const [location, setLocation] = useState("");
 
   const url =
-    "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=a317f1ed3617e08a94e2d851ebdb1b83";
+    "https://api.openweathermap.org/data/2.5/weather?q=durban&appid=a317f1ed3617e08a94e2d851ebdb1b83";
 
   const searchLocation = (event) => {
     if (event.key === "Enter") {
