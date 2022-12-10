@@ -9,7 +9,7 @@ export default function App() {
   const url =
     "https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=a317f1ed3617e08a94e2d851ebdb1b83";
 
-  const searchLocation = () => {
+  const searchLocation = (event) => {
     if (event.key === "Enter") {
       axios.get(url).then((response) => {
         setData(response.data);
@@ -33,9 +33,9 @@ export default function App() {
       <div className="container">
         <div className="top">
           <div className="location">
-            <p>Durban</p>
+            <p>{data.name}</p>
             <div className="temp">
-              <h1>50°F</h1>
+               {data.main ? <h1>{data.main.temp}°F</h1>: null }
             </div>
             <div className="description">
               <p>Clouds</p>
