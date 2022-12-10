@@ -38,7 +38,7 @@ export default function App() {
                {data.main ? <h1>{data.main.temp}°F</h1>: null }
             </div>
             <div className="description">
-              <p>Clouds</p>
+              {data.weather ? <p>{data.weather[0].main}</p> : null}
             </div>
           </div>
           <div className="bottom">
