@@ -65,6 +65,7 @@ export default function App() {
               </div>
             }
         </div>
+        <div>By: Sinethemba Ntantiso</div>
       </div>
     </div>
   );
