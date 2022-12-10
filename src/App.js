@@ -43,7 +43,7 @@ export default function App() {
           </div>
           <div className="bottom">
             <div className="feels">
-              <p className="bold">65°C</p>
+              {data.main ? <p className="bold">{data.main.feels_like}°C</p> : null}
               <p>Feels Like</p>
             </div>
             <div className="humidity">
